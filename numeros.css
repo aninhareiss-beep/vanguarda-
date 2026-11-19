@@ -1,0 +1,200 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.75)
+    ),
+    url("owl-eyes.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
+    overflow-x: hidden;
+}
+
+.pagina {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 80px;
+    gap: 40px;
+}
+
+.lista {
+    width: 45%;
+    min-width: 0;
+}
+
+.subtitulo {
+    color: #d9a0bb;
+    font-size: 18px;
+    letter-spacing: 6px;
+    margin-bottom: 35px;
+}
+
+.numeros {
+    display: grid;
+    grid-template-columns: repeat(5, 70px);
+    gap: 18px;
+}
+
+.numeros a {
+    color: #e45b98;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    padding: 15px 0;
+    border: 1px solid #e45b98;
+    transition: 0.3s;
+}
+
+.numeros a:hover {
+    background: #e45b98;
+    color: black;
+}
+
+.identidade {
+    width: 45%;
+    text-align: center;
+}
+
+.identidade h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 160px;
+    line-height: 0.8;
+    letter-spacing: 8px;
+    color: #e45b98;
+}
+
+.identidade span {
+    display: block;
+    margin-top: 45px;
+    color: #d9a0bb;
+    font-size: 25px;
+    letter-spacing: 15px;
+}
+
+/* TABLETS */
+@media (max-width: 1024px) {
+    .pagina {
+        padding: 50px 35px;
+        gap: 30px;
+    }
+
+    .lista,
+    .identidade {
+        width: 50%;
+    }
+
+    .numeros {
+        grid-template-columns: repeat(5, minmax(40px, 1fr));
+        gap: 12px;
+    }
+
+    .numeros a {
+        font-size: 17px;
+        padding: 13px 0;
+    }
+
+    .identidade h1 {
+        font-size: 110px;
+        letter-spacing: 6px;
+    }
+
+    .identidade span {
+        font-size: 19px;
+        letter-spacing: 10px;
+        margin-top: 35px;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    .pagina {
+        flex-direction: column;
+        justify-content: center;
+        padding: 45px 22px;
+        gap: 50px;
+    }
+
+    .lista {
+        width: 100%;
+    }
+
+    .subtitulo {
+        font-size: 15px;
+        letter-spacing: 4px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .numeros {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 10px;
+        width: 100%;
+    }
+
+    .numeros a {
+        font-size: 16px;
+        padding: 12px 0;
+    }
+
+    .identidade {
+        width: 100%;
+    }
+
+    .identidade h1 {
+        font-size: clamp(65px, 18vw, 95px);
+        letter-spacing: 5px;
+    }
+
+    .identidade span {
+        margin-top: 25px;
+        font-size: 16px;
+        letter-spacing: 8px;
+    }
+}
+
+/* CELULARES PEQUENOS */
+@media (max-width: 360px) {
+    .pagina {
+        padding: 35px 15px;
+    }
+
+    .numeros {
+        gap: 7px;
+    }
+
+    .numeros a {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+
+    .identidade h1 {
+        font-size: 62px;
+        letter-spacing: 3px;
+    }
+
+    .identidade span {
+        font-size: 13px;
+        letter-spacing: 6px;
+    }
+}

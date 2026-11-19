@@ -1,0 +1,187 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.75)
+    ),
+    url("owl-eyes.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
+    overflow-x: hidden;
+}
+
+.pagina {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px 40px;
+}
+
+h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 85px;
+    letter-spacing: 14px;
+    color: #e45b98;
+    text-align: center;
+}
+
+.escolha {
+    margin-top: 35px;
+    display: flex;
+    gap: 40px;
+    color: #d9a0bb;
+    font-size: 20px;
+    letter-spacing: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+form {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    max-width: 100%;
+    gap: 25px;
+}
+
+input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #e45b98;
+    padding: 15px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+    min-width: 0;
+}
+
+input::placeholder {
+    color: #d9a0bb;
+    letter-spacing: 3px;
+}
+
+.arquivo {
+    color: #d9a0bb;
+    border-bottom: 1px solid #e45b98;
+    padding: 15px;
+    letter-spacing: 3px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.arquivo input {
+    margin-top: 15px;
+    border: none;
+    color: white;
+}
+
+button {
+    margin-top: 30px;
+    background: transparent;
+    color: #e45b98;
+    border: 1px solid #e45b98;
+    padding: 15px;
+    font-size: 16px;
+    letter-spacing: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background: #e45b98;
+    color: black;
+}
+
+/* TABLETS */
+@media (max-width: 768px) {
+    .pagina {
+        padding-top: 65px;
+    }
+
+    h1 {
+        font-size: 65px;
+        letter-spacing: 10px;
+    }
+
+    .escolha {
+        gap: 25px;
+        font-size: 17px;
+        letter-spacing: 4px;
+    }
+
+    form {
+        margin-top: 45px;
+        width: 380px;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 480px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    .pagina {
+        padding: 50px 22px 35px;
+    }
+
+    h1 {
+        font-size: clamp(42px, 12vw, 55px);
+        letter-spacing: 6px;
+    }
+
+    .escolha {
+        margin-top: 25px;
+        gap: 18px;
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+
+    form {
+        margin-top: 40px;
+        width: 100%;
+        gap: 22px;
+    }
+
+    input {
+        font-size: 14px;
+        padding: 13px 10px;
+    }
+
+    input::placeholder {
+        letter-spacing: 2px;
+        font-size: 12px;
+    }
+
+    .arquivo {
+        padding: 13px 10px;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 14px 10px;
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+}

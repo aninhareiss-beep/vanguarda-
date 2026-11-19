@@ -1,0 +1,169 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    font-family: 'Montserrat', sans-serif;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.75)
+    ),
+    url("owl-eyes.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
+}
+
+.pagina {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 120px 20px 50px;
+}
+
+h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 85px;
+    letter-spacing: 14px;
+    color: #e45b98;
+    text-align: center;
+}
+
+.subtitulo {
+    margin-top: 35px;
+    font-size: 18px;
+    letter-spacing: 7px;
+    color: #d9a0bb;
+    text-align: center;
+}
+
+.opcoes {
+    margin-top: 90px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+    flex-wrap: wrap;
+}
+
+.opcoes a {
+    color: #e45b98;
+    text-decoration: none;
+    font-size: 30px;
+    letter-spacing: 8px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e45b98;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.opcoes a:hover {
+    color: white;
+    border-color: white;
+}
+
+/* TABLETS */
+@media (max-width: 768px) {
+    .pagina {
+        padding-top: 100px;
+    }
+
+    h1 {
+        font-size: 70px;
+        letter-spacing: 10px;
+    }
+
+    .subtitulo {
+        font-size: 16px;
+        letter-spacing: 5px;
+    }
+
+    .opcoes {
+        gap: 65px;
+        margin-top: 75px;
+    }
+
+    .opcoes a {
+        font-size: 25px;
+        letter-spacing: 6px;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 480px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    .pagina {
+        justify-content: center;
+        padding: 50px 20px;
+    }
+
+    h1 {
+        font-size: clamp(45px, 12vw, 60px);
+        letter-spacing: 6px;
+    }
+
+    .subtitulo {
+        margin-top: 25px;
+        font-size: 13px;
+        letter-spacing: 4px;
+        line-height: 1.6;
+    }
+
+    .opcoes {
+        margin-top: 65px;
+        flex-direction: column;
+        gap: 45px;
+    }
+
+    .opcoes a {
+        font-size: 23px;
+        letter-spacing: 5px;
+    }
+}
+
+/* CELULARES PEQUENOS */
+@media (max-width: 360px) {
+    .pagina {
+        padding: 40px 15px;
+    }
+
+    h1 {
+        font-size: 43px;
+        letter-spacing: 4px;
+    }
+
+    .subtitulo {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .opcoes {
+        gap: 35px;
+        margin-top: 50px;
+    }
+
+    .opcoes a {
+        font-size: 20px;
+        letter-spacing: 4px;
+    }
+}
